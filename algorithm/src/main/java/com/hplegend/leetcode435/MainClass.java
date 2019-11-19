@@ -9,7 +9,7 @@ public class MainClass {
     public static void main(String[] args) {
         LeetCode435 leetCode435 = new LeetCode435();
         int[][] interval = new int[][]{
-                {1, 4}, {2, 5}, {5, 7}
+                {1, 4}, {2, 3}, {3, 4}
         };
 
 

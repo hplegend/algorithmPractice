@@ -55,9 +55,8 @@ public class LeetCode435 {
 
 
     /**
-     * 解题一：
-     * 对区间按照开始排序；
-     * 一轮遍历，剔除跨区间且连续的
+     * 对区间按照结束排序；
+     * 一轮遍历，
      */
 
 
@@ -74,36 +73,28 @@ public class LeetCode435 {
         }
         Arrays.sort(intervals, intervelComp);
 
-        for (int[] var : intervals) {
-            System.out.println(var[0] + "_" + var[1]);
-        }
-
-        System.out.println(num);
-        System.out.println("------------------");
         // remove
-        int cnt = 0;
+        int cnt = 1;
         int[] base = intervals[0];
+
+        // 寻找最大连接的
+        // 总数减去即可得到最小删除数
+        // trick : 只是不重叠，允许断开
         for (int in = 1; in < intervals.length; ++in) {
             int[] cur = intervals[in];
-            // 后面的嵌入前一个的中间
-            if (cur[0] < base[1]) {
+            if (cur[0] >= base[1]) {
                 cnt++;
-                continue;
+                base = intervals[in];
             }
-
-            // 前后重叠
-            if (cur[0] == base[0] && cur[1] == base[1]) {
-                cnt++;
-                continue;
-            }
-            System.out.println(cur[0] + "_" + cur[1]);
-            base = cur;
         }
 
-        return cnt;
+        return intervals.length - cnt;
     }
 
 
+    /**
+     * 按照结束区间排序，从小到大拍序
+     */
     public Comparator intervelComp = new Comparator<int[]>() {
         @Override
         public int compare(int[] first, int[] second) {
@@ -122,16 +113,6 @@ public class LeetCode435 {
             if (null != first && null == second) {
                 return -1;
             }
-
-            if (first[0] < second[0]) {
-                return -1;
-            }
-
-            if (first[0] > second[0]) {
-                return 1;
-            }
-
-            // 等于
 
             if (first[1] < second[1]) {
                 return -1;
