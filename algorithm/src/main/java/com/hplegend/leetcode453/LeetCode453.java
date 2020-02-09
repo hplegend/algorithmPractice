@@ -1,4 +1,4 @@
-//Given a non-empty integer array of size n, find the minimum number of moves required to make all array elements equal, where a move is incrementing n - 1 elements by 1. 
+package com.hplegend.leetcode453;//Given a non-empty integer array of size n, find the minimum number of moves required to make all array elements equal, where a move is incrementing n - 1 elements by 1.
 // n-1个元素都需要+1
 //
 // Example:
@@ -36,8 +36,8 @@ class LeetCode453 {
 
 		for (int i =0 ;i < nums.length; ++ i) {
 			sum  += nums[i];
-			if(minimum > nums[i]) {
-				minimum = nums[i];
+			if(minNum > nums[i]) {
+				minNum = nums[i];
 			}
 
 		}

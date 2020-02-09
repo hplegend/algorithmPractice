@@ -1,4 +1,4 @@
-//An undirected, connected graph of N nodes (labeled 0, 1, 2, ..., N-1) is given as graph. 
+package com.hplegend.leetcode847;//An undirected, connected graph of N nodes (labeled 0, 1, 2, ..., N-1) is given as graph.
 //
 // graph.length = N, and j != i is in the list graph[i] exactly once, if and only if nodes i and j are connected. 
 //
@@ -35,6 +35,8 @@
 // Related Topics Dynamic Programming Breadth-first Search
 
 
+import java.util.LinkedList;
+import java.util.Queue;
 
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {

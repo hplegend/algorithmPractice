@@ -57,7 +57,7 @@ public class LeetCode537 {
 		String [] s = str.split("\\+");
 		int [] val = new int [2];
 		val[0] = Integer.parseInt(s[0]);
-		val[1] = Integer.parseInt(s.replace("i",""));
+	//	val[1] = Integer.parseInt(s.replace("i",""));
 		return val;
 	}
 
