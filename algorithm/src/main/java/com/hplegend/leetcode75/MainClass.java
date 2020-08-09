@@ -6,15 +6,15 @@ package com.hplegend.leetcode75;
  */
 public class MainClass {
 
-    public static void main (String []args) {
+    private static volatile  int mm = 0;
+    public static void main(String[] args) {
         Leetcode75 leetcode75 = new Leetcode75();
-        int []nums = new int[]{0,1,2};
+        int[] nums = new int[]{0, 1, 2};
         leetcode75.sortColors3(nums);
         for (int var : nums) {
             System.out.print(var);
             System.out.print(" ");
         }
-
     }
 
 }
