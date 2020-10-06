@@ -68,12 +68,9 @@ public class Leetcode322 {
 
     private static Map<Integer, Integer> calMinMap = new HashMap<>();
 
-
     // 最后返回的肯定数量
     public int coinChange(int[] coins, int amount) {
-
-
-        return 0;
+        return dp(coins, amount);
     }
 
     public int oridinaryRecuersive(int[] coins, int amount) {
@@ -176,5 +173,4 @@ public class Leetcode322 {
 
         return dp[amount] == 65535 ? -1 : dp[amount];
     }
-
 }
