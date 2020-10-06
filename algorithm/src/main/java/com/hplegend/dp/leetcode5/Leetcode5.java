@@ -1,4 +1,4 @@
-package com.hplegend.leetcode5;
+package com.hplegend.dp.leetcode5;
 
 /**
  * @author hp.he

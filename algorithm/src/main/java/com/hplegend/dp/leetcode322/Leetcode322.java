@@ -1,4 +1,4 @@
-package com.hplegend.leetcode322;
+package com.hplegend.dp.leetcode322;
 
 //You are given coins of different denominations and a total amount of money amo
 //unt. Write a function to compute the fewest number of coins that you need to mak
@@ -55,9 +55,7 @@ package com.hplegend.leetcode322;
 // Related Topics Dynamic Programming
 
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 /**
