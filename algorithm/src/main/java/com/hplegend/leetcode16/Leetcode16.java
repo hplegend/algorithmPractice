@@ -6,6 +6,7 @@ public class Leetcode16 {
 
 
     // 固定一个，遍历其余两个。 双指针应用
+    // 这个题目的思考方向： 先是暴力破解； 优化暴力破解的方法就是排序，固定一个，求另外两个。这样用n的立方优化为n的平方。 利用双指针的优势。
 
     public int threeSumClosest(int[] nums, int target) {
 
