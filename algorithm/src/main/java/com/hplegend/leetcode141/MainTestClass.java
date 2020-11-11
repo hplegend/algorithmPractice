@@ -20,10 +20,6 @@ public class MainTestClass {
             System.out.println(ele);
         }
 
-      arr.forEach(ele->{
-
-      });
-
 
     }
 
