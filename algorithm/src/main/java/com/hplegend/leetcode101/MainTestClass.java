@@ -1,6 +1,6 @@
 package com.hplegend.leetcode101;
 
-import com.hplegend.base.TreeNode;
+import com.hplegend.leetcode101.TreeNode;
 
 /**
  * @author hp.he
@@ -14,20 +14,20 @@ public class MainTestClass {
         TreeNode left_1 = new TreeNode(2);
         TreeNode right_1 = new TreeNode(2);
 
-        root.setLeft(left_1);
-        root.setRight(right_1);
+        root.left = left_1;
+        root.right = right_1;
 
 
         TreeNode left_1_l = new TreeNode(3);
         TreeNode left_1_r = new TreeNode(4);
-        left_1.setLeft(left_1_l);
-        left_1.setRight(null);
+        left_1.left = left_1_l;
+        left_1.right = null;
 
 
         TreeNode right_1_l = new TreeNode(4);
         TreeNode right_1_r = new TreeNode(5);
-        right_1.setLeft(right_1_l);
-        right_1.setRight(null);
+        right_1.left = right_1_l;
+        right_1.right = null;
 
         Leetcode101 leetcode101 = new Leetcode101();
         System.out.println(leetcode101.isSymmetric(root));

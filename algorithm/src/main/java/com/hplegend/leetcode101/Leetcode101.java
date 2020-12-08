@@ -1,7 +1,7 @@
 package com.hplegend.leetcode101;
 
 
-import com.hplegend.base.TreeNode;
+import com.hplegend.leetcode101.TreeNode;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -55,38 +55,18 @@ public class Leetcode101 {
     }
 
 
-    private boolean isSymmetric_one(TreeNode root) {
-        List<Integer> preFirstRet = new ArrayList<>();
-        isSymmetric_one_recursive(root, preFirstRet);
-
-        for (Integer ele : preFirstRet) {
-            System.out.println(ele);
-        }
-
-
-        return true;
-    }
-
-    private void isSymmetric_one_recursive(TreeNode node, List<Integer> ret) {
-
-        if (null == node) {
-            ret.add(null);
-            return;
-        }
-
-        // 先序遍历
-        ret.add(node.getVal());
-        isSymmetric_one_recursive(node.getLeft(), ret);
-        isSymmetric_one_recursive(node.getRight(), ret);
-    }
-
     private boolean isSymmetric_two(TreeNode root) {
+
+        if (null == root) {
+            return true;
+        }
+
 
         List<Integer> leftRet = new ArrayList<>();
         List<Integer> rightRet = new ArrayList<>();
 
-        isSymmetric_two_left(root.getLeft(), leftRet);
-        isSymmetric_two_right(root.getRight(), rightRet);
+        isSymmetric_two_left(root.left, leftRet);
+        isSymmetric_two_right(root.right, rightRet);
 
 
         if (leftRet.size() != rightRet.size()) {
@@ -124,9 +104,9 @@ public class Leetcode101 {
         }
 
         // 先序遍历
-        ret.add(node.getVal());
-        isSymmetric_two_left(node.getRight(), ret);
-        isSymmetric_two_left(node.getLeft(), ret);
+        ret.add(node.val);
+        isSymmetric_two_left(node.right, ret);
+        isSymmetric_two_left(node.left, ret);
 
     }
 
@@ -138,29 +118,10 @@ public class Leetcode101 {
         }
 
         // 先序遍历
-        ret.add(node.getVal());
-        isSymmetric_two_right(node.getLeft(), ret);
-        isSymmetric_two_right(node.getRight(), ret);
+        ret.add(node.val);
+        isSymmetric_two_right(node.left, ret);
+        isSymmetric_two_right(node.right, ret);
 
-    }
-
-
-    private boolean isSymmetric_three(TreeNode root) {
-
-        if (null == root) {
-            return true;
-        }
-
-        int left_value = null == root.getLeft() ? 0 : root.getLeft().getVal();
-        int right_value = null == root.getRight() ? 0 : root.getRight().getVal();
-
-        if (left_value == right_value) {
-            boolean leaf_sub = isSymmetric_three((root.getLeft()));
-            boolean right_sub = isSymmetric_three((root.getRight()));
-            return leaf_sub && right_sub;
-        } else {
-            return false;
-        }
     }
 
 }
