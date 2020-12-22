@@ -6,6 +6,11 @@ package com.hplegend.leetcode75;
  */
 public class MainClass {
 
+    public static void sum() {
+        System.out.print("ddddddd");
+    }
+
+
     public static void main (String []args) {
         Leetcode75 leetcode75 = new Leetcode75();
         int []nums = new int[]{0,1,2};
@@ -14,7 +19,7 @@ public class MainClass {
             System.out.print(var);
             System.out.print(" ");
         }
-
+        sum();
     }
 
 }
