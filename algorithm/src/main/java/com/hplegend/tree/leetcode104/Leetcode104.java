@@ -27,8 +27,8 @@ public class Leetcode104 {
             return 0;
         }
 
-        int legfDepth = maxDepth(root.getLeft());
-        int rightDepght = maxDepth(root.getRight());
+        int legfDepth = maxDepth(root.left);
+        int rightDepght = maxDepth(root.right);
 
         return legfDepth > rightDepght ? legfDepth + 1 : rightDepght + 1;
     }
