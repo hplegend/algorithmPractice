@@ -1,6 +1,8 @@
 package com.hplegend.base;
 
 import javax.annotation.processing.SupportedSourceVersion;
+import java.util.LinkedList;
+import java.util.Queue;
 
 /**
  * 树的层序遍历
@@ -11,18 +13,25 @@ import javax.annotation.processing.SupportedSourceVersion;
 public class TreeLevelTransver {
 
 
+    // 层序遍历，借助栈来实现
+    private static Queue<TreeNode> levelStack = new LinkedList<>();
+
     public static void doLevenTranser(TreeNode root) {
 
-        if (null == root) {
-            return;
+        levelStack.add(root);
+
+        while (!levelStack.isEmpty()) {
+
+            TreeNode curNode = levelStack.poll();
+
+            if (null == curNode) {
+                continue;
+            }
+
+            System.out.println(curNode.val);
+
+            levelStack.add(curNode.left);
+            levelStack.add(curNode.right);
         }
-
-        System.out.println(root.val);
-        doLevenTranser(root.left);
-        doLevenTranser(root.right);
-
-
     }
-
-
 }
