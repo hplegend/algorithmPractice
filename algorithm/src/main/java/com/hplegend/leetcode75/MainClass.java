@@ -5,7 +5,6 @@ package com.hplegend.leetcode75;
  * @date 2020/2/10 17:13
  */
 public class MainClass {
-
     private static volatile  int mm = 0;
     public static void main(String[] args) {
         Leetcode75 leetcode75 = new Leetcode75();
@@ -16,5 +15,4 @@ public class MainClass {
             System.out.print(" ");
         }
     }
-
 }
