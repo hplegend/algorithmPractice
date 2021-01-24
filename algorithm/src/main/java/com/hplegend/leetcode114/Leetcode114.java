@@ -30,6 +30,7 @@ public class Leetcode114 {
         root.right = left;
 
         // 拼接 right 到left的最后一个节点
+        // 实际上遍历的是左节点
         TreeNode tmp = root.right;
         while (tmp.right != null) {
             tmp = tmp.right;
